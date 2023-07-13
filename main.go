@@ -8,7 +8,7 @@ import(
 
 func main(){
 	http.HandleFunc("/", func(rw http.ResponseWritter, r *http.Request){
-		fmt.Fprintf(rw,"Full Cycle Rocks")
+		fmt.Fprintf(rw,"Full Cycle")
 	})
 
 	log.Fatal(http.listenAndServe(":8080", nil))
