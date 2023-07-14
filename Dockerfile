@@ -1,10 +1,10 @@
-FROM golang:1.20
+FROM golang:1.17-alpine AS builder
 
 WORKDIR /app
 
 COPY go.mod .
 COPY main.go .
 
-RUN go build -o server .
+run go build -o server
 
-ENTRYPOINT [ "/app/server" ]
+ENTRYPOINT [ "/app/serve" ]
