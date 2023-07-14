@@ -7,4 +7,4 @@ COPY main.go .
 
 run go build -o server
 
-ENTRYPOINT [ "/app/serve" ]
+ENTRYPOINT [ "/app/server" ]

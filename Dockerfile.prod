@@ -9,6 +9,8 @@ run go build -o server
 
 FROM scratch
 
+WORKDIR /app
+
 COPY --from=builder /app .
 
 ENTRYPOINT [ "/app/server" ]
