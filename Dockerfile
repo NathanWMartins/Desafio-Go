@@ -1,11 +1,10 @@
-from golang:
+from golang:1.20
 
 workdir /app
 
-copy main.go /
+copy go.mod .
+copy main.go .
 
-run go build -o /server
+run go build -o server .
 
-expose 8080
-
-cmd[ "/server" ]
+entrypoint [ "/app/server" ]
